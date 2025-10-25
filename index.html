@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pizzaria - Cardápio Interativo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="header" class="section">
+        <h1>Pizzaria do Mezequiel — Faça seu pedido</h1>
+        <p>
+          Escolha o tamanho e os sabores. Montagem e visualização em tempo real.
+        </p>
+      </div>
+
+      <div id="tamanhos" class="section">
+        <h2>Tamanhos</h2>
+        <div class="sizes">
+          <label
+            ><input type="radio" name="size" value="broto" /> Broto (apenas 1
+            sabor) <span class="price" data-size="broto"></span
+          ></label>
+          <label
+            ><input type="radio" name="size" value="p" /> P (até 2 sabores)
+            <span class="price" data-size="p"></span
+          ></label>
+          <label
+            ><input type="radio" name="size" value="m" /> M (até 3 sabores)
+            <span class="price" data-size="m"></span
+          ></label>
+          <label
+            ><input type="radio" name="size" value="g" /> G (até 4 sabores)
+            <span class="price" data-size="g"></span
+          ></label>
+          <label
+            ><input type="radio" name="size" value="familia" /> Família (até 6
+            sabores) <span class="price" data-size="familia"></span
+          ></label>
+        </div>
+        <div id="limitNote" class="note">Selecione um tamanho.</div>
+      </div>
+
+      <div id="sabores" class="section">
+        <h2>Sabores adicionais</h2>
+        <div id="flavorsList" class="flavors"></div>
+        <div id="flavorNote" class="note">
+          Escolha os sabores após selecionar o tamanho.
+        </div>
+      </div>
+
+      <div id="preview" class="section">
+        <h2>Montagem da pizza (visualização)</h2>
+        <div id="pizzaWrapper">
+          <div id="pizzaBase" class="pizza">
+            <!-- Slices serão inseridas aqui dinamicamente como DIVs -->
+          </div>
+        </div>
+        <div id="previewList" class="note">Nenhum sabor selecionado.</div>
+      </div>
+
+      <div id="dados" class="section">
+        <h2>Dados para entrega</h2>
+        <div class="formRow">
+          <label>Nome:<br /><input type="text" id="name" /></label>
+        </div>
+        <div class="formRow">
+          <label
+            >Telefone (com DDD):<br /><input
+              type="text"
+              id="phone"
+              placeholder="1199876...."
+          /></label>
+        </div>
+        <div class="formRow">
+          <label>Endereço:<br /><input type="text" id="address" /></label>
+        </div>
+        <div class="formRow">
+          <label
+            >Bairro:<br />
+            <select id="neighborhood"></select>
+          </label>
+        </div>
+        <div id="deliveryFee" class="note"></div>
+      </div>
+
+      <div id="resumo" class="section">
+        <h2>Resumo do pedido</h2>
+        <div id="orderSummary" class="note">Nenhum pedido montado.</div>
+        <div id="priceBreakdown" class="note"></div>
+        <button id="confirmBtn">Confirmar pedido via WhatsApp</button>
+      </div>
+
+      <div id="footer" class="section">
+        <small
+          >Editável: altere o número do WhatsApp no arquivo
+          <code>app.js</code>.</small
+        >
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

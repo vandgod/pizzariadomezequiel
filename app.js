@@ -4,7 +4,7 @@
 // Número de WhatsApp para envio (formato internacional, sem sinais).
 // Substitua pelo número da pizzaria: 55 (BR) + DDD + número, sem espaços ou sinais.
 // Exemplo: '5511999999999'
-const WHATSAPP_NUMBER = '5511999999999'; // substitua pelo seu número
+const WHATSAPP_NUMBER = '5511989727254'; // substitua pelo seu número
 
 // Lista de sabores disponíveis (texto exibido nos checkboxes). Para adicionar/remover
 // sabores, edite este array. Os nomes são usados também para colorir as fatias
@@ -291,3 +291,4 @@ neighborhoodSelect.addEventListener('change', updateUI);
 
 // inicialização
 init();
+
